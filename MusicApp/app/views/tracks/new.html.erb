@@ -1,0 +1,10 @@
+<form action="<%= tracks_url %>" method="post">
+  <label for="track_name">Track Name:</label>
+
+  <input type="hidden" name="album[id]" value="<%=params[:album_id]%>">
+
+  <input type= "text"
+         id= "track_name"
+         name= "track[name]">
+  <button>Submit</button>
+</form>

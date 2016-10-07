@@ -1,0 +1,9 @@
+<h2><%= @band.name %></h2>
+<br>
+<% @albums.each do |album| %>
+  <%= link_to album.name, album_url(album) %>
+  <br>
+<% end %>
+
+<%= button_to "Delete Band", band_url(@band), method: :delete %>
+<%= button_to "Add Album", new_band_album_url(@band), method: :get %>
